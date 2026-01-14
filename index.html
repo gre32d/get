@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Электронная библиотека</title>
+  <meta name="description" content="Читайте книги онлайн бесплатно — классика, научная литература, учебники и многое другое." />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    main {
+      padding: 2rem 1rem;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .book-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .book {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 180px;
+      text-align: center;
+    }
+    .book img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    footer {
+      background-color: #34495e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Электронная библиотека</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#books">Книги</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="books">
+      <h2>Популярные книги</h2>
+      <div class="book-list">
+        <div class="book">
+          <img src="https://via.placeholder.com/180x250?text=Война+и+мир" alt="Война и мир – Лев Толстой" loading="lazy" />
+          <h3>Война и мир</h3>
+          <p>Лев Толстой</p>
+        </div>
+        <div class="book">
+          <img src="https://via.placeholder.com/180x250?text=Преступление+и+наказание" alt="Преступление и наказание – Фёдор Достоевский" loading="lazy" />
+          <h3>Преступление и наказание</h3>
+          <p>Фёдор Достоевский</p>
+        </div>
+        <div class="book">
+          <img src="https://via.placeholder.com/180x250?text=Мастер+и+Маргарита" alt="Мастер и Маргарита – Михаил Булгаков" loading="lazy" />
+          <h3>Мастер и Маргарита</h3>
+          <p>Михаил Булгаков</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Электронная библиотека. Все права защищены.</p>
+  </footer>
+
+  <script>
+    // Простой JS для демонстрации
+    console.log("Сайт 'Электронная библиотека' успешно загружен.");
+  </script>
+</body>
+</html>
