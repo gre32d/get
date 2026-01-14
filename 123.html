@@ -3,118 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Электронная библиотека</title>
-  <meta name="description" content="Читайте книги онлайн бесплатно — классика, научная литература, учебники и многое другое." />
+  <title>ЧитайДома — Электронная библиотека</title>
+  <meta name="description" content="Бесплатная электронная библиотека: классика, фантастика, учебники и новинки литературы." />
   <style>
-    * {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #2d3748;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
     }
     header {
-      background-color: #2c3e50;
+      background: linear-gradient(135deg, #4a6cf7, #2c3e50);
       color: white;
-      padding: 1rem 0;
       text-align: center;
-    }
-    header h1 {
-      margin-bottom: 0.5rem;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
-    main {
       padding: 2rem 1rem;
     }
-    h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
     }
-    .book-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
     }
-    .book {
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .book-card {
       background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 180px;
-      text-align: center;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
     }
-    .book img {
+    .book-card:hover {
+      transform: translateY(-5px);
+    }
+    .book-cover {
       width: 100%;
-      height: auto;
-      border-radius: 4px;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+    .book-info {
+      padding: 1rem;
+    }
+    .book-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .book-author {
+      color: #666;
+      font-style: italic;
     }
     footer {
-      background-color: #34495e;
-      color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 1.5rem;
+      background: #edf2f7;
+      color: #4a5568;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>📚 Электронная библиотека</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Главная</a></li>
-        <li><a href="#books">Книги</a></li>
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#contact">Контакты</a></li>
-      </ul>
-    </nav>
+    <h1>📚 ЧитайДома</h1>
+    <p>Ваша бесплатная электронная библиотека</p>
   </header>
 
-  <main>
-    <section id="books">
-      <h2>Популярные книги</h2>
-      <div class="book-list">
-        <div class="book">
-          <img src="https://via.placeholder.com/180x250?text=Война+и+мир" alt="Война и мир – Лев Толстой" loading="lazy" />
-          <h3>Война и мир</h3>
-          <p>Лев Толстой</p>
-        </div>
-        <div class="book">
-          <img src="https://via.placeholder.com/180x250?text=Преступление+и+наказание" alt="Преступление и наказание – Фёдор Достоевский" loading="lazy" />
-          <h3>Преступление и наказание</h3>
-          <p>Фёдор Достоевский</p>
-        </div>
-        <div class="book">
-          <img src="https://via.placeholder.com/180x250?text=Мастер+и+Маргарита" alt="Мастер и Маргарита – Михаил Булгаков" loading="lazy" />
-          <h3>Мастер и Маргарита</h3>
-          <p>Михаил Булгаков</p>
+  <div class="container">
+    <h2>Рекомендуем почитать</h2>
+    <div class="books">
+      <div class="book-card">
+        <img src="https://via.placeholder.com/220x280?text=Анна+Каренина" alt="Анна Каренина – Лев Толстой" class="book-cover" loading="lazy" />
+        <div class="book-info">
+          <div class="book-title">Анна Каренина</div>
+          <div class="book-author">Лев Толстой</div>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="book-card">
+        <img src="https://via.placeholder.com/220x280?text=Идиот" alt="Идиот – Фёдор Достоевский" class="book-cover" loading="lazy" />
+        <div class="book-info">
+          <div class="book-title">Идиот</div>
+          <div class="book-author">Фёдор Достоевский</div>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="https://via.placeholder.com/220x280?text=Собачье+сердце" alt="Собачье сердце – Михаил Булгаков" class="book-cover" loading="lazy" />
+        <div class="book-info">
+          <div class="book-title">Собачье сердце</div>
+          <div class="book-author">Михаил Булгаков</div>
+        </div>
+      </div>
+      <div class="book-card">
+        <img src="https://via.placeholder.com/220x280?text=Гарри+Поттер+1" alt="Гарри Поттер и философский камень – Дж. К. Роулинг" class="book-cover" loading="lazy" />
+        <div class="book-info">
+          <div class="book-title">Гарри Поттер и философский камень</div>
+          <div class="book-author">Дж. К. Роулинг</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2026 Электронная библиотека. Все права защищены.</p>
+    <p>© 2026 ЧитайДома. Все книги представлены в ознакомительных целях.</p>
   </footer>
 
   <script>
-    // Простой JS для демонстрации
-    console.log("Сайт 'Электронная библиотека' успешно загружен.");
+    // Простая аналитика для демонстрации JS
+    document.querySelectorAll('.book-card').forEach(card => {
+      card.addEventListener('click', () => {
+        alert('Функция чтения будет доступна после регистрации!');
+      });
+    });
   </script>
+
 </body>
 </html>
